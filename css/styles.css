@@ -1,0 +1,77 @@
+body {
+    background-color: whitesmoke;
+}
+.logo {
+    border-radius: 60px; 
+    max-width: 100px;
+    max-height: 100px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+header {
+  padding: 30px 0;
+  background: url(../imagenes/Red.webp);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.film {
+  font-size: 16px;
+  min-height: 650px;
+  color: white;
+  background: url(../imagenes/Creed.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-end;
+}
+.film .container {
+  margin: auto;
+  margin-bottom: 100px;
+}
+.film .titulo {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: white;
+}
+.cartelera {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10%;
+}
+.cartelera {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 0px;
+}
+footer {
+  border-top: 1px solid gray;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-top: 70px;
+  width: 100%;
+  bottom:0;
+  height: 83px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  width: 90%;
+  margin: auto;
+}
