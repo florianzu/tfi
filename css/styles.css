@@ -58,9 +58,8 @@ header nav a {
   padding-left: 0px;
 }
 footer {
-  border-top: 1px solid gray;
-  color: black;
-  background: url(../imagenes/footer-fondo-pie.jpg);
+  border-top: 3px solid gray;
+  color: beige;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,7 +82,7 @@ form {
     flex-wrap: wrap;
 }
 .imagen {
-    height: 200x;
+    height: 300px;
     width: 200px;
     flex-wrap: nowrap;
     margin-right: 20px;
@@ -103,4 +102,17 @@ form{
 }
 .buscador {
   margin-right: 10px;
+}
+.detail {
+  text-decoration: none;
+  color: beige;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uncharteditem {
+  display: flex;
+  align-items: flex-start;
 }
