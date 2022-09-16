@@ -102,3 +102,57 @@ form {
 main {
     background-color: #2E2727;
 }
+
+/* CSS DE genres.html y detail-genres.html */
+
+.bodygen{ 
+  background-color:#2E2727;
+}
+
+.lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+  background-color: #161414;
+}
+.titulo {
+  display: flex;
+  justify-content: left;
+}
+.imag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 270px;
+  width: 200px;
+  border-radius: 5%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.8s;
+  
+}
+.imag:hover{
+  transform: scale(1.1);
+}
+
+.generos1 {
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 300px;
+  
+}
+.generos2 { 
+  color: white;
+}
+.bodydetail { 
+  background-image: url(/tfi/imagenes/Topgun.jpg);
+  background-repeat: no-repeat;
+
+}
