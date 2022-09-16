@@ -142,10 +142,15 @@ main {
 .generos2 { 
   color: white;
 }
-.bodydetail { 
-  background-image: url(/tfi/imagenes/Topgun.jpg);
+
+
+.palabras { 
+  background-image: url(../imagenes/uncharted.jpg);
   background-repeat: no-repeat;
+  object-fit: cover;
+  height: 500px;
 }
+/*  Fin genres.html y detail-genres.html */
 .no-search-results {
   display: none;
 }
