@@ -90,7 +90,11 @@ form {
     margin-right: 20px;
     margin-left: 20px;
     overflow: scroll;
-    border-radius: 15px; 
+    border-radius: 15px;
+    transition: transform 0.8s; 
+}
+.imagen:hover {
+  transform: scale(1.1);
 }
 main {
     color: beige;
