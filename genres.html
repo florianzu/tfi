@@ -9,58 +9,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <title>Sin Codificar</title>
 </head>
-<body class="bodygen">
-    <h1 class="generos2"> Generos </h1>
-    <h2 class="generos2"> Peliculas </h2>
-    <div class="lista">
-        <div>
-            <a class="generos1" href="detail-genres.html">Accion</a>
-            <a href="./detail-genres.html"><img class="imag" src="./imagenes/Rocky.jpg" alt=""></a>
+<body>
+    <header class="principal">
+        <div class="container">
+            <article>
+                <img src="./imagenes/logo2.webp" alt="logo" class="logo">
+            </article>
+            <nav class="">
+                <a href="./index.html">HOME</a>
+                <a href="./genres.html">GENEROS</a>
+                <a href="favoritos.html">FAVORITOS</a>
+            </nav>
         </div>
-        <div>
-            <a class="generos1" href="detail-genres.html">Fantasia</a>
-            <a href="./detail-genres.html"><img class="imag" src="./imagenes/harry-potter.jpg" alt=""></a>
-        </div>
-        <div>
-            <a class="generos1" href="detail-genres.html">Ciencia Ficcion</a>
-            <a href="./detail-genres.html"><img class="imag" src="./imagenes/tron.jpg" alt=""></a>
-        </div>
-        <div>
-            <a class="generos1" href="detail-genres.html">Drama</a>
-            <a href="./detail-genres.html"><img class="imag" src="./imagenes/corazones de hierro.jpg" alt=""></a>
-        </div>
-        <div>
-            <a class="generos1" href="detail-genres.html">Comedia</a>
-            <a href="./detail-genres.html"><img class="imag" src="./imagenes/Zohan.webp" alt=""></a>
-        </div>
-    </div>
-    
-    <div>
-        <h2 class="generos2"> Series </h2>
+        <form action="search-results.html" method="get">
+            <div class="buscador">
+                <label for="search"></label>
+                <input id="search" type="text" name="search" value="" placeholder="Buscar Peliculas...">
+            </div>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </header>
+    <main class="bodygen">
+        <h1 class="generos2"> Generos </h1>
+        <h2 class="generos2"> Peliculas </h2>
         <div class="lista">
             <div>
                 <a class="generos1" href="detail-genres.html">Accion</a>
-                <img class="imag" src="./imagenes/arrow.jpg" alt="">
+                <a href="./detail-genres.html"><img class="imag" src="./imagenes/uncharted.jpg" alt=""></a>
             </div>
             <div>
                 <a class="generos1" href="detail-genres.html">Fantasia</a>
-                <img class="imag" src="./imagenes/outlander.jpg" alt="">
+                <a href="./detail-genres.html"><img class="imag" src="./imagenes/Minions.jpg" alt=""></a>
             </div>
             <div>
                 <a class="generos1" href="detail-genres.html">Ciencia Ficcion</a>
-                <img class="imag" src="./imagenes/strangerthings.jpg" alt="">
+                <a href="./detail-genres.html"><img class="imag" src="./imagenes/jurassic.jpg" alt=""></a>
             </div>
             <div>
                 <a class="generos1" href="detail-genres.html">Drama</a>
-                <img class="imag" src="./imagenes/juegodelcalamar.jpg" alt="">
+                <a href="./detail-genres.html"><img class="imag" src="./imagenes/Morbius.jpg.sb-d3bd4ee8-55q0hQ" alt=""></a>
             </div>
             <div>
                 <a class="generos1" href="detail-genres.html">Comedia</a>
-                <img class="imag" src="./imagenes/brooklyn99.jpg" alt="">
+                <a href="./detail-genres.html"><img class="imag" src="./imagenes/Zohan.webp" alt=""></a>
             </div>
         </div>
-    </div>
-
+        
+        <div>
+            <h2 class="generos2"> Series </h2>
+            <div class="lista">
+                <div>
+                    <a class="generos1" href="detail-genres.html">Accion</a>
+                    <img class="imag" src="./imagenes/arrow.jpg" alt="">
+                </div>
+                <div>
+                    <a class="generos1" href="detail-genres.html">Fantasia</a>
+                    <img class="imag" src="./imagenes/outlander.jpg" alt="">
+                </div>
+                <div>
+                    <a class="generos1" href="detail-genres.html">Ciencia Ficcion</a>
+                    <img class="imag" src="./imagenes/strangerthings.jpg" alt="">
+                </div>
+                <div>
+                    <a class="generos1" href="detail-genres.html">Drama</a>
+                    <img class="imag" src="./imagenes/juegodelcalamar.jpg" alt="">
+                </div>
+                <div>
+                    <a class="generos1" href="detail-genres.html">Comedia</a>
+                    <img class="imag" src="./imagenes/brooklyn99.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="slide">
+            Jano Mejalelaty, Mateo Iriarte y Florian Zuberbuhler
+        </p>
+    </footer>
 </body>
 </html>
