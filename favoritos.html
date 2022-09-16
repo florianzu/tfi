@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Sin Codificar</title>
 </head>
+
 <body>
     <header class="principal">
         <div class="container">
@@ -20,9 +22,9 @@
             </nav>
         </div>
         <form action="search-results.html" method="get">
-            <div>
+            <div class="buscador">
                 <label for="search"></label>
-                <input id="search" type="text" name="search" value="">
+                <input id="search" type="text" name="search" value="" placeholder="Buscar Peliculas...">
             </div>
             <div>
                 <button type="submit">Enviar</button>
@@ -33,35 +35,40 @@
         <section class="cartelera-contenedor">
             <h1>FAVORITOS</h1>
             <h2 class="formato">PELICULAS SELECCIONADAS</h2>
-                <div> 
-                    <section class="Contenedor"> 
-                        <article class="Item Gladiator">
-                            <img class= "imagen" src="./imagenes/Gladiator.jpg" alt="">
-                            <h3>Gladiator</h3>
-                            <p>2000 <a href="detail-movie.html" class="detail">+</a> </p>
-                        </article>
-                        <article class="Item Avatar">
-                            <img class= "imagen" src="./imagenes/Avatar.jpg" alt="">
-                            <h3>Avatar</h3>
-                            <p>2009 <a href="detail-movie.html" class="detail">+</a> </p>
-                        </article>
-                        <article class="Item doctor">
-                            <img class= "imagen" src="./imagenes/DoctorStrange.jpg" alt="">
-                            <h3>Doctor Strange</h3>
-                            <p>2022 <a href="detail-movie.html" class="detail">+</a> </p>
-                        </article>
-                        <article class="Item uncharted">
-                            <img class= "imagen" src="./imagenes/uncharted.jpg" alt="">
-                            <h3>Uncharted</h3>
-                            <p>2022 <a href="detail-movie.html" class="detail">+</a> </p>
-                        </article>
-                        <article class="Item Hollywood">
-                            <img class= "imagen" src="./imagenes/Hollywood.webp" alt="">
-                            <h3>Once upon a time in Hollywood</h3>
-                            <p>2019 <a href="detail-movie.html" class="detail">+</a> </p>
-                        </article>
-                    </section>
-                </div>
+            <div>
+                <section class="Contenedor">
+                    <article class="Item Gladiator">
+                        <a href="detail-movie.html" class="detail"><img class="imagen" src="./imagenes/Gladiator.jpg"
+                                alt=""></a>
+                        <h3>Gladiator</h3>
+                        <p>2000</p>
+                    </article>
+                    <article class="Item Avatar">
+                        <a href="detail-movie.html" class="detail"><img class="imagen" src="./imagenes/Avatar.jpg"
+                                alt=""></a>
+                        <h3>Avatar</h3>
+                        <p>2009</p>
+                    </article>
+                    <article class="Item doctor">
+                        <a href="detail-movie.html" class="detail"><img class="imagen"
+                                src="./imagenes/DoctorStrange.jpg" alt=""></a>
+                        <h3>Doctor Strange</h3>
+                        <p>2022</p>
+                    </article>
+                    <article class="Item uncharted">
+                        <a href="detail-movie.html" class="detail"><img class="imagen" src="./imagenes/uncharted.jpg"
+                                alt=""></a>
+                        <h3>Uncharted</h3>
+                        <p>2022</p>
+                    </article>
+                    <article class="Item Hollywood">
+                        <a href="detail-movie.html" class="detail"><img class="imagen" src="./imagenes/Hollywood.webp"
+                                alt=""></a>
+                        <h3>Once upon a time in Hollywood</h3>
+                        <p>2019</p>
+                    </article>
+                </section>
+            </div>
     </main>
     <footer>
         <p class="slide">
@@ -69,4 +76,5 @@
         </p>
     </footer>
 </body>
+
 </html>

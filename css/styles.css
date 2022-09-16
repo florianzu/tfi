@@ -102,6 +102,10 @@ main {
 .Item-Garra {
   display: flex;
   align-items: flex-start;
+  margin-left: 20px;
+}
+.align {
+  margin-left: 80px;
 }
 .no-search-results {
   display: none;
@@ -125,6 +129,7 @@ article {
 .uncharteditem {
   display: flex;
   align-items: flex-start;
+  margin-left: 50px;
 }
 
 /* CSS DE genres.html y detail-genres.html */
