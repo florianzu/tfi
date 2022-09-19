@@ -188,3 +188,33 @@ article {
 .generos2 { 
   color: white;
 }
+.palabras { 
+  background-image: url(../imagenes/uncharted.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 500px;
+}
+/*  Fin genres.html y detail-genres.html */
+.no-search-results {
+  display: none;
+}
+form{
+  display: flex;
+  justify-content: flex-end;
+}
+.buscador {
+  margin-right: 10px;
+}
+.detail {
+  text-decoration: none;
+  color: beige;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uncharteditem {
+  display: flex;
+  align-items: flex-start;
+}
