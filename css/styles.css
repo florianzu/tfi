@@ -82,6 +82,8 @@ form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: space-around;
 }
 .imagen {
     height: 300px;
@@ -130,6 +132,15 @@ article {
   display: flex;
   align-items: flex-start;
   margin-left: 50px;
+}
+.uncharteditem p {
+  margin: 20px;
+  font-size: 20px;
+}
+.uncharteditem h2 {
+  font-size: 40px;
+  padding: 10px;
+  margin: 30px;
 }
 
 /* CSS DE genres.html y detail-genres.html */
