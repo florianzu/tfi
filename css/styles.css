@@ -11,6 +11,7 @@ body {
   margin: auto;
 }
 header {
+  width: 100%;
   padding: 30px 0;
   border-bottom: 3px solid gray;
 }
@@ -57,20 +58,10 @@ header nav a {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   padding-left: 0px;
 }
-footer {
-  border-top: 3px solid gray;
-  color: beige;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-  width: 100%;
-  bottom:0;
-  height: 90px;
-  align-items: flex-end;
-}
+
 form {
   display: flex;
   justify-content: center;
@@ -86,14 +77,15 @@ form {
     justify-content: space-around;
 }
 .imagen {
+    display: flex;
     height: 300px;
     width: 200px;
-    flex-wrap: nowrap;
-    margin-right: 20px;
-    margin-left: 20px;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    margin-left: 30px;
     overflow: scroll;
     border-radius: 15px;
-    transition: transform 0.8s; 
+    transition: transform 0.8s;
 }
 .imagen:hover {
   transform: scale(1.1);
@@ -142,6 +134,18 @@ article {
   padding: 10px;
   margin: 30px;
 }
+footer {
+  border-top: 3px solid gray;
+  color: beige;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+  bottom:0;
+  height: 90px;
+  align-items: flex-end;
+}
 
 /* CSS DE genres.html y detail-genres.html */
 
@@ -149,9 +153,11 @@ article {
 .lista {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 50px;
   background-color: #161414;
+  overflow: scroll;
 }
 .titulo {
   display: flex;
@@ -161,7 +167,7 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 270px;
+  height: 300px;
   width: 200px;
   border-radius: 5%;
   margin-top: 15px;
@@ -183,7 +189,6 @@ article {
   margin-bottom: 20px;
   margin-top: 20px;
   font-weight: 300px;
-  
 }
 .generos2 { 
   color: white;
@@ -195,26 +200,11 @@ article {
   height: 500px;
 }
 /*  Fin genres.html y detail-genres.html */
-.no-search-results {
-  display: none;
-}
-form{
-  display: flex;
-  justify-content: flex-end;
-}
-.buscador {
-  margin-right: 10px;
-}
-.detail {
-  text-decoration: none;
-  color: beige;
-}
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.uncharteditem {
-  display: flex;
-  align-items: flex-start;
+@media (max-width: 433px) {
+  header nav {
+    display: none;
+  }
+  header form {
+    display: none;
+  }
 }
