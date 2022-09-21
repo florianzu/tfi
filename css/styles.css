@@ -1,6 +1,9 @@
 body {
     background: url(../imagenes/footer.jpg);
 }
+*{
+    box-sizing: border-box
+}
 /* CSS DE header */
 .logo {
     border-radius: 60px; 
