@@ -162,7 +162,7 @@ footer {
   justify-content: center;
   margin-top: 50px;
   width: 100%;
-  bottom:0;
+  margin-bottom: 30px;
   height: 90px;
   align-items: flex-end;
 }
