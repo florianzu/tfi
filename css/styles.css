@@ -146,16 +146,11 @@ article {
   margin: 20px;
   font-size: 20px;
 }
-.uncharteditem h2 {
-  font-size: 40px;
-  padding: 10px;
-  margin: 30px;
-}
 section.detalle h2 {
   margin-left: 60px;
 }
 section.detalle img {
-  margin-left: 40px;
+  margin-left: 55px;
 }
 /* FIN CSS DE main cartelera*/
 /* CSS DE footer*/
