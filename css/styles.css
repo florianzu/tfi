@@ -76,6 +76,7 @@ h2.formato{
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  margin: 30px;
 } 
 .cartelera {
   display: flex;
