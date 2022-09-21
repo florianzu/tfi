@@ -71,6 +71,7 @@ main h1{
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  margin: 30px;
 }
 h2.formato{
   display: flex;
@@ -88,7 +89,6 @@ h2.formato{
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding-left: 0px;
 }
 .Contenedor {
     display: flex;
