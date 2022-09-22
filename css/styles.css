@@ -223,10 +223,20 @@ footer {
 /*  Fin genres.html y detail-genres.html */
 @media (max-width: 433px) {
   header nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   header form {
     display: none;
+  }
+  .lista {
+    display: flex;
+    flex-direction: column;
+  }
+  .generos1 {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
