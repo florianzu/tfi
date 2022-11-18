@@ -15,10 +15,12 @@ fetch(url)
         
         Peliculas+=`
         <article class= cartelera>
-        <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
-         <p>Name:${element.title}</p>
-         <p>Date: ${element.release_date} </p>
-        </article>`
+        <a href="detail-movie.html">
+            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+        </a>
+             <p>Name:${element.title}</p>
+             <p>Date: ${element.release_date} </p>
+            </article>`
     }
     container.innerHTML= Peliculas
 })

@@ -19,18 +19,16 @@ fetch(url)
         else {
             tituloBusqueda.innerText = `Resultado de busqueda para: ${busqueda}`
         }
-        let srsec = document.querySelector(".srec")
-        let resultados = ""
+        let srul = document.querySelector(".srul")
         for (let i = 0; i < data.results.length; i++) {
             const element = data.results[i];
-            resultados += `
-            <article class= cartelera>
-            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
-             <p>Name:${element.title}</p>
-             <p>Date: ${element.release_date} </p>
-            </article>`
+            srul.innerText += `<article>
+                <img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/>
+                <p>${element.title}</p>
+                <p>${element.release_date}</p>      
+           </article>`  
         }
-        srsec.innerText = resultados
+        
     })   
    .catch(function (error) {
         console.log(error);
