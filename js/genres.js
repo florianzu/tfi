@@ -7,7 +7,7 @@ fetch(url)
 })
 .then(function(data) {
     console.log(data.genres);
-    let genero = document.querySelector(".titulo")
+    let genero = document.querySelector(".generos1")
     let Peliculas = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
@@ -26,7 +26,7 @@ fetch(urlSeries)
 })
 .then(function(data) {
     console.log(data.genres);
-    let generos = document.querySelector(".titulo2")
+    let generos = document.querySelector(".generos  2")
     let Series = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
