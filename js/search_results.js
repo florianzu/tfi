@@ -23,7 +23,7 @@ fetch(url)
         for (let i = 0; i < data.results.length; i++) {
             const element = data.results[i];
             srul.innerText += `<article>
-                <img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/>
+                <a href="detail-movie.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
                 <p>${element.title}</p>
                 <p>${element.release_date}</p>      
            </article>`  
@@ -40,7 +40,24 @@ fetch(urlSeries)
     })
     .then(function (data) {
         console.log(data);
-        return data
+        let tituloBusqueda = document.querySelector(".srtext")
+
+
+        if (data.results.length == 0) {
+            tituloBusqueda.innerText = `No se a encontrado resultado de busqueda para: ${busqueda}`
+        }
+        else {
+            tituloBusqueda.innerText = `Resultado de busqueda para: ${busqueda}`
+        }
+        let srul = document.querySelector(".srul")
+        for (let i = 0; i < data.results.length; i++) {
+            const element = data.results[i];
+            srul.innerText += `<article>
+                <a href="detail-series.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
+                <p>${element.title}</p>
+                <p>${element.release_date}</p>      
+           </article>`  
+        }
     })
 
     .catch(function (error) {
