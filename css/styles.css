@@ -181,4 +181,28 @@ footer {
   }
 }
 
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.elem{
+  width: 300px;
+  height: 400px;
+  margin-top: 10%;
+  border-radius: 3px;
+}
+
+.imgs{
+  width: 250px;
+  height: 350px;
+  border-radius: 5%;
+}
+
+.titulospelis{ 
+  text-align: center;
+  margin-right: 12%;
+  font-weight: 900;
+  font-size: 18px;
+}

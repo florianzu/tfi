@@ -18,7 +18,8 @@ function showData(data) {
     main.innerHTML = ""; 
     data.forEach((genre)=>{const {title, poster_path} = genre
 const element = document.createElement("div")
-element.innerHTML = `<img src="${imageurl + poster_path}" alt=""> <h2>${title}</h2>` 
+element.innerHTML = `<div class="elem"><img class= "imgs" src="${imageurl + poster_path}" alt=""> <h2 class = "titulospelis">${title}</h2> </div>` 
 main.appendChild(element)
 })
 }
+
