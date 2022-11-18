@@ -11,7 +11,6 @@ fetch(url)
     let Peliculas = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
-        
         Peliculas+=``
     }
     genero.innerHTML= Peliculas
@@ -19,7 +18,6 @@ fetch(url)
 .catch(function(error){
     console.log(error);
     return error
-
 })
 
 fetch(urlSeries)
@@ -32,7 +30,6 @@ fetch(urlSeries)
     let Series = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
-        
         Series+=``
     }
     generos.innerHTML = Series
@@ -40,5 +37,4 @@ fetch(urlSeries)
 .catch(function(error){
     console.log(error);
     return error
-
 })
