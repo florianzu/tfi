@@ -11,7 +11,13 @@ fetch(url)
     let Peliculas = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
-        Peliculas+=``
+        Peliculas+=`
+        <article class = "containerGeneros">
+            <a href="detail-genres.html?id=${element.id}">
+                <p>Name:${element.name}</p>
+            </a>
+        </article>
+        `
     }
     genero.innerHTML= Peliculas
 })
@@ -26,11 +32,17 @@ fetch(urlSeries)
 })
 .then(function(data) {
     console.log(data.genres);
-    let generos = document.querySelector(".generos  2")
+    let generos = document.querySelector(".generos2")
     let Series = ""
     for (let index = 0; index < 5; index++) {
         const element = data.genres[index];
-        Series+=``
+        Series+=`
+        <article>
+            <a href="detail-genres.html?id=${element.id}">
+                <p>Name:${element.name}</p>
+            </a>
+        </article>
+        `
     }
     generos.innerHTML = Series
 })

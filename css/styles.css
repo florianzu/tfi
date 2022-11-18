@@ -181,6 +181,10 @@ footer {
   }
 }
 
+/*JS*/
+
+/*detail-genre*/
+
 #main{
   display: flex;
   flex-wrap: wrap;
@@ -219,3 +223,6 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/*genre*/
+
