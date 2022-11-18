@@ -4,16 +4,16 @@ const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&langu
 const imageurl = 'https://image.tmdb.org/t/p/w500'
 const main = document.querySelector("#main")
 
-getdrama(url); 
-function getdrama(url) {
+getdatos(url); 
+function getdatos(url) {
     fetch(url)
     .then(response =>response.json())
     .then(data =>  { 
         console.log(data.results);
-          showData(data.results) ;
+          showPelis(data.results) ;
    })
 }
-function showData(data) {
+function showPelis(data) {
 
     main.innerHTML = ""; 
     data.forEach((genre)=>{const {title, poster_path} = genre
@@ -23,3 +23,24 @@ main.appendChild(element)
 })
 }
 
+
+const urltv = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+const mainn = document.querySelector("#mainn")
+
+getdatos2(urltv); 
+function getdatos2(serie) {
+    fetch(serie)
+    .then(response =>response.json())
+    .then(data =>  { 
+        console.log(data.results);
+          showTV(data.results) ;
+   })
+}
+function showTV(data) {
+    mainn.innerHTML = ""; 
+    data.forEach((tv)=>{const {title, poster_path} = tv
+const element2 = document.createElement("div")
+element2.innerHTML = `<div class="elem"><img class= "imgs" src="${imageurl + poster_path}" alt=""> <h2 class = "titulospelis">${title}</h2> </div>` 
+mainn.appendChild(element2)
+})
+}
