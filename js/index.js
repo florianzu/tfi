@@ -43,7 +43,7 @@ fetch(urlSeries)
         
         Series+=`
         <article class= cartelera>
-        <a href="detail-series.html"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
+        <a href="detail-series.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
          <p>Name:${element.name}</p>
          <p>Date: ${element.first_air_date} </p>
         </article>`
@@ -69,7 +69,7 @@ fetch(urlMasvistas)
         
         Mas_vistas+=`
         <article class= cartelera>
-        <a href="detail-movie.html"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
+        <a href="detail-movie.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
          <p>Name:${element.title}</p>
          <p>Date: ${element.release_date} </p>
         </article>`
