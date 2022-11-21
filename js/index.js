@@ -15,7 +15,7 @@ fetch(url)
         
         Peliculas+=`
         <article class= cartelera>
-        <a href="detail-movie.html">
+        <a href="detail-movie.html?buscador=${element.id}">
             <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
         </a>
              <p>Name:${element.title}</p>
