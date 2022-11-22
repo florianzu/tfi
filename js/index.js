@@ -14,13 +14,26 @@ fetch(url)
         const element = data.results[index];
         
         Peliculas+=`
-        <article class= cartelera>
+        <div class= 'movie'>
+
+       
+        <main class= 'cartelera'>
         <a href="detail-movie.html?buscador=${element.id}">
-            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+            <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
         </a>
-             <p>Name:${element.title}</p>
-             <p>Date: ${element.release_date} </p>
-            </article>`
+        <div class="movie-info">
+             <p>${element.title}</p>
+             <p> ${element.release_date} </p>
+             <span class="${getColor(element.vote_average)}">${element.vote_average} </span>
+             </div>
+
+             <h3 class="overview">overview</h3>
+             <div class="overview">
+                 ${element.overview}
+             </div>
+
+            </main>
+            </div>`
     }
     container.innerHTML= Peliculas
 })
@@ -42,11 +55,26 @@ fetch(urlSeries)
         const element = data.results[index];
         
         Series+=`
-        <article class= cartelera>
-        <a href="detail-series.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
-         <p>Name:${element.name}</p>
-         <p>Date: ${element.first_air_date} </p>
-        </article>`
+        <div class= 'movie'>
+
+       
+        <main class= 'cartelera'>
+        <a href="detail-movie.html?buscador=${element.id}">
+            <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+        </a>
+        <div class="movie-info">
+             <p>${element.name}</p>
+             <p> ${element.first_air_date} </p>
+             <span class="${getColor(element.vote_average)}">${element.vote_average} </span>
+             </div>
+
+             <h3 class="overview">overview</h3>
+             <div class="overview">
+                 ${element.overview}
+             </div>
+
+            </main>
+            </div>`
     }
     container.innerHTML= Series
 })
@@ -68,11 +96,26 @@ fetch(urlMasvistas)
         const element = data.results[index];
         
         Mas_vistas+=`
-        <article class= cartelera>
-        <a href="detail-movie.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
-         <p>Name:${element.title}</p>
-         <p>Date: ${element.release_date} </p>
-        </article>`
+        <div class= 'movie'>
+
+       
+        <main class= 'cartelera'>
+        <a href="detail-movie.html?buscador=${element.id}">
+            <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+        </a>
+        <div class="movie-info">
+             <p>${element.title}</p>
+             <p> ${element.release_date} </p>
+             <span class="${getColor(element.vote_average)}">${element.vote_average} </span>
+             </div>
+
+             <h3 class="overview">overview</h3>
+             <div class="overview">
+                 ${element.overview}
+             </div>
+
+            </main>
+            </div>`
     }
     container.innerHTML= Mas_vistas
 })
@@ -81,3 +124,13 @@ fetch(urlMasvistas)
     return error
 
 })
+
+function getColor(a){
+    if(a >= 6.8){
+        return'green'
+    }else if (a >= 5 ) {
+    return 'orange'
+    } else{
+        return'red'
+    }
+ }
