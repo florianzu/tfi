@@ -14,7 +14,7 @@ fetch(url)
 
 
         if (data.results.length == 0) {
-            tituloBusqueda.innerText = `No se a encontrado resultado de busqueda para: ${busqueda}`
+            tituloBusqueda.innerText = `No se ha encontrado resultado de busqueda para: ${busqueda}`
         }
         else {
             tituloBusqueda.innerText = `Resultado de busqueda para: ${busqueda}`
@@ -22,7 +22,7 @@ fetch(url)
         let srul = document.querySelector(".srul")
         for (let i = 0; i < data.results.length; i++) {
             const element = data.results[i];
-            srul.innerText += `<article>
+            srul.innerHTML += `<article>
                 <a href="detail-movie.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
                 <p>${element.title}</p>
                 <p>${element.release_date}</p>      
@@ -52,11 +52,13 @@ fetch(urlSeries)
         let srul = document.querySelector(".srul")
         for (let i = 0; i < data.results.length; i++) {
             const element = data.results[i];
-            srul.innerText += `<article>
+            srul.innerHTML += `
+            <div class= 'movie'>
                 <a href="detail-series.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
-                <p>${element.title}</p>
-                <p>${element.release_date}</p>      
-           </article>`  
+                <p>${element.name}</p>
+                <p>${element.first_air_date}</p>      
+                </div>
+          `  
         }
     })
 
