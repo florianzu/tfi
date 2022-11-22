@@ -12,7 +12,7 @@ fetch(url)
     .then(function (data) {
         let container = document.querySelector('.detalle2')
         let contenido =
-        `<article class= "contenedor">
+            `<article class= "contenedor">
         <img class = "fotofast" src= "https://image.tmdb.org/t/p/w500${data.poster_path}" alt='' /> 
         <h1>${data.title}</h1>
         <p class = "texto"> <u>Fecha de estreno</u>: ${data.release_date} </p>

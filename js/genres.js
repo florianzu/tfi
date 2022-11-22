@@ -1,6 +1,6 @@
 let apiKey = "925f4b20191d3e6290b49bd816600eda"
-let url = "https://api.themoviedb.org/3/genre/movie/list?api_key=925f4b20191d3e6290b49bd816600eda&language=en-US"
-let urlSeries =  "https://api.themoviedb.org/3/genre/tv/list?api_key=925f4b20191d3e6290b49bd816600eda&language=en-US"
+let url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
+let urlSeries =  `https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-US`
 fetch(url)
 .then(function(respuesta) {
     return respuesta.json();

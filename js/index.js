@@ -1,7 +1,7 @@
 let apiKey = "925f4b20191d3e6290b49bd816600eda"
-let url = "https://api.themoviedb.org/3/movie/popular?api_key=925f4b20191d3e6290b49bd816600eda&language=en-US&page=1"
-let urlSeries = "https://api.themoviedb.org/3/tv/popular?api_key=925f4b20191d3e6290b49bd816600eda&language=en-US&page=1"
-let urlMasvistas = "https://api.themoviedb.org/3/movie/top_rated?api_key=925f4b20191d3e6290b49bd816600eda&language=en-US&page=1"
+let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
+let urlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`
+let urlMasvistas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
 fetch(url)
 .then(function(respuesta) {
     return respuesta.json();
