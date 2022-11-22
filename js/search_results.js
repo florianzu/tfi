@@ -23,7 +23,7 @@ fetch(url)
         for (let i = 0; i < data.results.length; i++) {
             const element = data.results[i];
             srul.innerHTML += `<article>
-                <a href="detail-movie.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
+                <a href="detail-movie.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
                 <p>${element.title}</p>
                 <p>${element.release_date}</p>      
            </article>`  
@@ -43,7 +43,7 @@ fetch(urlSeries)
         let tituloBusqueda = document.querySelector(".srtext")
 
 
-        if (data.results.length == 0) {
+        if (data.length == 0) {
             tituloBusqueda.innerText = `No se a encontrado resultado de busqueda para: ${busqueda}`
         }
         else {
