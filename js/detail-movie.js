@@ -5,7 +5,10 @@ let idpeliculas = qsObjeto.get("buscador");
 const url = `https://api.themoviedb.org/3/movie/${idpeliculas}?api_key=${apiKey}&language=en-US`
 let fav = document.querySelector(".clicFav")
 
+// https://api.themoviedb.org/3/tv/${idpeliculas}?api_key=${apiKey}&language=en-US
+// https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=${apiKey}
 fetch(url)
+    
     .then(function (response) {
         return response.json();
     })

@@ -2,6 +2,7 @@ let apiKey = "925f4b20191d3e6290b49bd816600eda"
 let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
 let urlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`
 let urlMasvistas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`
+
 fetch(url)
 .then(function(respuesta) {
     return respuesta.json();
@@ -14,13 +15,17 @@ fetch(url)
         const element = data.results[index];
         
         Peliculas+=`
-        <article class= cartelera>
-        <a href="detail-movie.html?buscador=${element.id}">
-            <img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
-        </a>
-             <p>Name:${element.title}</p>
-             <p>Date: ${element.release_date} </p>
-            </article>`
+        
+        <article class="movie-info">
+            <a href="detail-movie.html?buscador=${element.id}">
+                <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+            </a>
+            
+                 <p>${element.title}</p>
+                 <p <u>Fecha de estreno</u>: ${element.release_date} </p>
+                 <span class="${getColor(element.vote_average)}"> ${element.vote_average} </span>
+        </article>
+             `
     }
     container.innerHTML= Peliculas
 })
@@ -42,11 +47,16 @@ fetch(urlSeries)
         const element = data.results[index];
         
         Series+=`
-        <article class= cartelera>
-        <a href="detail-series.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
-         <p>Name:${element.name}</p>
-         <p>Date: ${element.first_air_date} </p>
-        </article>`
+        <article class="movie-info">
+            
+            <a href="detail-series.html?buscador=${element.id}">
+                <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+            </a>
+                 <p>${element.name}</p>
+                 <p <u>Fecha de estreno</u>: ${element.first_air_date} </p>
+                 <span class="${getColor(element.vote_average)}"> ${element.vote_average} </span>
+        </article>
+            `
     }
     container.innerHTML= Series
 })
@@ -68,10 +78,15 @@ fetch(urlMasvistas)
         const element = data.results[index];
         
         Mas_vistas+=`
-        <article class= cartelera>
-        <a href="detail-movie.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' /></a>
-         <p>Name:${element.title}</p>
-         <p>Date: ${element.release_date} </p>
+        <article class="movie-info">
+            
+            <a href="detail-movie.html?buscador=${element.id}">
+                <img class= 'img' src="https://image.tmdb.org/t/p/w500${element.poster_path}" alt='imagen' />
+            </a>
+                 <p>  ${element.title}</p>
+                 <p <u>Fecha de estreno</u>: ${element.release_date} </p>
+                 <span class="${getColor(element.vote_average)}"> ${element.vote_average} </span>
+            
         </article>`
     }
     container.innerHTML= Mas_vistas
@@ -81,3 +96,13 @@ fetch(urlMasvistas)
     return error
 
 })
+
+function getColor(a){
+    if(a >= 6.8){
+        return'green'
+    }else if (a >= 5 ) {
+    return 'orange'
+    } else{
+        return'red'
+    }
+ }

@@ -20,7 +20,7 @@ fetch(url)
             tituloBusqueda.innerText = `Resultado de busqueda para: ${busqueda}`
         }
         let srul = document.querySelector(".srul")
-        for (let i = 0; i < data.results.length; i++) {
+        for (let i = 0; i < 5; i++) {
             const element = data.results[i];
             srul.innerHTML += `<article>
                 <a href="detail-movie.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
@@ -50,13 +50,15 @@ fetch(urlSeries)
             tituloBusqueda.innerText = `Resultado de busqueda para: ${busqueda}`
         }
         let srul = document.querySelector(".srul")
-        for (let i = 0; i < data.results.length; i++) {
+        for (let i = 0; i < 1; i++) {
             const element = data.results[i];
-            srul.innerHTML += `<article>
-                <a href="detail-series.html?buscador=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
+            srul.innerHTML += `
+            <div class= 'movie'>
+                <a href="detail-series.html?id=${element.id}"><img src="https://image.tmdb.org/t/p/w500${element.poster_path}"/></a>
                 <p>${element.name}</p>
                 <p>${element.first_air_date}</p>      
-           </article>`  
+                </div>
+          `  
         }
     })
 
