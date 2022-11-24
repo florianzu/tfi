@@ -88,8 +88,8 @@
            console.log(data);
            seriesFavoritas += 
            `
-           <article class="articulosIndex">
-           <div class="contenedorImagen">
+           <article >
+           <div>
                <a href="detail-series.html?id=${data.id}">
                    <img src= "https://image.tmdb.org/t/p/w500${data.poster_path}" alt="">
                </a>
