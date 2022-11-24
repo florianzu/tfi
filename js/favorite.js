@@ -34,8 +34,8 @@
            console.log(data);
            peliculasFavoritas += 
            `
-           <article class="articulosIndex">
-           <div class="contenedorImagen">
+           <article>
+           <div>
                <a href="detail-movie.html?id=${data.id}">
                    <img src= "https://image.tmdb.org/t/p/w342/${data.poster_path}" alt="">
                </a>
