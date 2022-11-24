@@ -11,7 +11,7 @@
    
 
    if(favoritos == null || favoritos.length == 0 ) {
-       favoritosTitular.innerText = "¡No hay favoritos seleccionados!"
+       section.innerText = "¡No hay favoritos seleccionados!"
 
    }
    else{
@@ -54,7 +54,7 @@
    }
 
    let recuperoStorage2 = localStorage.getItem("favoritostv");
-   let favoritosTv = JSON.parse(recuperoStorage)
+   let favoritosTv = JSON.parse(recuperoStorage2)
    console.log(favoritosTv);
 
    
@@ -65,7 +65,7 @@
    
 
    if(favoritosTv == null || favoritosTv.length == 0 ) {
-       favoritosTitular.innerText = "¡No hay favoritos seleccionados!"
+       section2.innerText = "¡No hay favoritos seleccionados!"
 
    }
    else{
