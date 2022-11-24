@@ -23,6 +23,38 @@ fetch(url)
         </article>
         `;
         container.innerHTML += contenido
+        
+        let favs = document.querySelector(".clicFav")
+
+        let favoritostv = []
+
+        let recuperoStorage = localStorage.getItem("favoritostv")
+
+        if (recuperoStorage != null) {
+            favoritostv = JSON.parse(recuperoStorage)
+        }
+
+        if (favoritostv.includes(idseries)) {
+            favs.innerText = "Quitar de favoritos";
+        }
+
+        favs.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (favoritostv.includes(idseries)) {
+                let indice = favoritostv.indexOf(idseries)
+                favoritostv.splice(indice, 1);
+                favs.innerText = "Agregar a Favoritos";
+            } else {
+                favoritostv.push(idseries)
+                favs.innerText = "Quitar de favoritos"
+            }
+
+            let favsToString = JSON.stringify(favoritostv);
+            localStorage.setItem("favoritostv", favsToString);
+
+            console.log(localStorage);
+        });
     })
     .catch(function (error) {
         return error;

@@ -5,10 +5,8 @@ let idpeliculas = qsObjeto.get("buscador");
 const url = `https://api.themoviedb.org/3/movie/${idpeliculas}?api_key=${apiKey}&language=en-US`
 let fav = document.querySelector(".clicFav")
 
-// https://api.themoviedb.org/3/tv/${idpeliculas}?api_key=${apiKey}&language=en-US
-// https://api.themoviedb.org/3/movie/{movie_id}/watch/providers?api_key=${apiKey}
 fetch(url)
-    
+
     .then(function (response) {
         return response.json();
     })
@@ -25,36 +23,40 @@ fetch(url)
         </article>
         `;
         container.innerHTML += contenido
+
+        let fav = document.querySelector(".clicFav")
+
+        let favoritos = []
+
+        let recuperoStorage = localStorage.getItem("favoritos")
+
+        if (recuperoStorage != null) {
+            favoritos = JSON.parse(recuperoStorage)
+        }
+
+        if (favoritos.includes(idpeliculas)) {
+            fav.innerText = "Quitar de favoritos";
+        }
+
+        fav.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (favoritos.includes(idpeliculas)) {
+                let indice = favoritos.indexOf(idpeliculas)
+                favoritos.splice(indice, 1);
+                fav.innerText = "Agregar a Favoritos";
+            } else {
+                favoritos.push(idpeliculas)
+                fav.innerText = "Quitar de favoritos"
+            }
+
+            let favsToString = JSON.stringify(favoritos);
+            localStorage.setItem("favoritos", favsToString);
+
+            console.log(localStorage);
+        });
     })
     .catch(function (error) {
         console.log(error);
         return error;
     });
-
-let favoritos = []
-
-let recuperoStorage = localStorage.getItem("favoritos")
-
-if (recuperoStorage != null) {
-    favoritos = JSON.parse(recuperoStorage)
-}
-
-if (favoritos.includes(idpeliculas)) {
-    fav.innerText = "Quitar de favoritos";
-}
-
-fav.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    if (favoritos.includes(idpeliculas)) {
-        let indice = favoritos.indexOf(idpeliculas)
-        favoritos.splice(indice, 1);
-        fav.innerText = "Agregar a Fav";
-    } else {
-        favoritos.push(idpeliculas)
-        fav.innerText = "Quitar de favoritos"
-    }
-
-    let favsToString = JSON.stringify(favoritos);
-    localStorage.setItem("favoritos", favsToString)
-})
